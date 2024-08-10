@@ -1,0 +1,91 @@
+== Flex Container Properties ==
+
+=== display  ===
+
+The starting point, if set to *flex*, it defines a *flex container* and sets the *flex context* for all direct child elements.
+
+{{{css
+.container {
+  display: flex;
+}
+}}}
+
+
+=== flex-flow ===
+
+The flex items will be layed along the [[https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction|*main axis*]], that depends on the *flex-direction* property, left to right, top to down.
+
+      |
+      |
+------|------ main axis
+      |
+      | 
+  cross axis
+ 
+ 
+{{{css
+.container {
+  flex-direction: row | row-reverse | column | column-reverse;
+}
+}}}
+
+It defaults to _row_
+
+The items will be aligned along the axis in the following way:
+* row: main axis is horizontal, left to right.
+* row-reverse: main axis is horizontal, right to left.
+* column: the cross axis becomes the main axis, top to bottom.
+* column-reverse: the cross axis becomes the main axis, bottom to top.
+
+*Note*: the above will be influence by the [[https://developer.mozilla.org/en-US/docs/Web/CSS/direction|css direction]] property.
+
+
+=== flex-wrap ===
+
+By default the flex items will be positioned all along one line, but if the content does not fit, you can change this behaviour with *flex-wrap*.
+
+
+{{{css
+.container {
+  flex-wrap: nowrap | wrap | wrap-reverse;
+}
+}}}
+
+
+=== justify-content ===
+
+----------------- _main axis_
+
+This is an important one and defines how the flex items will take up the available space along the main axis.
+You can try these out in the developer tools to see what they actually do ;)
+
+{{{css
+.container {
+  justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly | start | end | left | right ... + safe | unsafe;
+}
+}}}
+
+
+=== align-items ===
+
+        |
+        |
+        |
+        |
+        |
+    _cross axis_
+
+Like *justify-content* but for the cross axis.
+
+{{{css
+.container {
+  align-items: stretch | flex-start | flex-end | center | baseline | first baseline | last baseline | start | end | self-start | self-end + ... safe | unsafe;
+}
+}}}
+
+
+----
+
+[[css-flex|back]]
+
+:css: :flex:

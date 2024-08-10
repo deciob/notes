@@ -1,0 +1,15 @@
+= Spell checking =
+ 
+Set a local spellcheck:
+`:setlocal spell spelllang=en_gb`
+
+Go to next error:
+`:]s`
+
+Go to previous error:
+`:[s`
+
+Choose a spell fix:
+`z=`
+
+:vim: :nvim:

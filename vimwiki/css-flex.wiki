@@ -1,0 +1,7 @@
+= CSS Flexbox essentials =
+
+CSS Flexbox is made up of a *flex container* and child *flex items* that follow the *flex-flow*.
+
+[[css-flex-container-properties|Flex Container Properties]]
+
+:css: :flex:
