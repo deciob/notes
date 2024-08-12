@@ -11,13 +11,13 @@ The starting point, if set to *flex*, it defines a *flex container* and sets the
 }}}
 
 
-=== flex-flow ===
+=== flex-direction ===
 
 The flex items will be layed along the [[https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction|*main axis*]], that depends on the *flex-direction* property, left to right, top to down.
 
       |
       |
-------|------ main axis
+¬¬¬¬¬¬|¬¬¬¬¬¬ main axis
       |
       | 
   cross axis
@@ -54,7 +54,7 @@ By default the flex items will be positioned all along one line, but if the cont
 
 === justify-content ===
 
------------------ _main axis_
+¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬ _main axis_
 
 This is an important one and defines how the flex items will take up the available space along the main axis.
 You can try these out in the developer tools to see what they actually do ;)
@@ -83,6 +83,11 @@ Like *justify-content* but for the cross axis.
 }
 }}}
 
+
+=== gap ===
+
+Shorthand for *column-gap* and *row-gap*, sets a _gap_ between row and columns.
+It is generally a better solution compared to _margins_ as you do not need to consider first and last childs. 
 
 ----
 
