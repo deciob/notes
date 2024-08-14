@@ -1,0 +1,55 @@
+= Organising CSS =
+
+
+
+== Comments ==
+
+Comment logical sections, such as _headers and navigation_, _main section_, _sidebar_, etc.
+This will help to visually identify the different sections.
+You can also add a special string in the comments, such as *||*, to more easily jump from one section to another.
+
+
+== Sections ==
+
+Add the general styling first. This is anything that is not specific to a certain logical section or component. 
+If the sections become very big, break them down in separate files and consider using a compilation step to concatenate, minify, etc.
+
+
+== Selectors ==
+
+As much as possible avoid overly-specific selectors. 
+Overly-specific selectors make it hard to reuse and maintain code.
+
+
+== BEM ==
+
+[[https://getbem.com/|BEM]] stands for *Block*, *Element*, *Modifier*.
+
+=== Block ===
+A *Block* is a section of your *HTML* that has meaning on its own. 
+*Blocks* can be nested, but are all semantically equivalent. 
+
+{{{html
+ <div class="block">...</div>
+}}}
+
+=== Element ===
+*Elements* live within *Blocks* and only make sense as part of a block. 
+
+{{{html
+ <div class="block">
+    <div class="block__element"></div>
+ </div>
+}}}
+
+=== Modifier ===
+*Modifiers* change the appearance of a *Block* or an *Element*.
+
+{{{html
+ <div class="block">
+    <div class="block__element block__element--highlighted"></div>
+ </div>
+}}}
+
+
+

@@ -15,11 +15,11 @@ The starting point, if set to *flex*, it defines a *flex container* and sets the
 
 The flex items will be layed along the [[https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction|*main axis*]], that depends on the *flex-direction* property, left to right, top to down.
 
-      |
-      |
-¬¬¬¬¬¬|¬¬¬¬¬¬ main axis
-      |
-      | 
+      ¬
+      ¬
+¬¬¬¬¬¬¬¬¬¬¬¬¬ main axis
+      ¬
+      ¬ 
   cross axis
  
  
@@ -68,11 +68,11 @@ You can try these out in the developer tools to see what they actually do ;)
 
 === align-items ===
 
-        |
-        |
-        |
-        |
-        |
+        ¬
+        ¬
+        ¬
+        ¬
+        ¬
     _cross axis_
 
 Like *justify-content* but for the cross axis.
