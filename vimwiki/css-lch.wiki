@@ -1,0 +1,17 @@
+= LCH Color Space =
+
+LCH stands for:
+* L: perceptual luminosity
+* C: chroma (intensity of the color)
+* H: hue (the color itself)
+
+== Absolute value syntax ==
+
+`lch(L C H[ / A])`
+
+* L: expressed as a percentage (0% - 100%), a number (0 - 100). 0 is black, 100 is white.
+* C: percentage or number, 100% is equivalent to 150. Max meaningful number 230.
+* H: angle or number, represents the hue angle. Check the [[https://developer.mozilla.org/en-US/docs/Web/CSS/hue|MDN hue page]] for an image of the hue wheel and more info.
+* A: optional alpha channel, percentage (0% - 100%) or number (0 - 1). 
+
+
