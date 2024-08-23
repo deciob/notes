@@ -1,0 +1,91 @@
+= CSS Selectors =
+
+== Some well known selectors ==
+
+* `*` is the _universal selector_ and matches any element!
+* `html` is an example of _type selector_, that can target any HTML element directly.
+* `.my-class`, is a _class selector_ and matches any HTML element with that class.
+* `#id`, is an _id selector_ and matches that HTML element with that ID. As Ids should be unique, avoid uing them for styling!
+
+== Attribute selectors ==
+
+This is the standard attribute selector signature:
+[attribute='value']
+
+So, for example, given this HTML element:
+
+{{{html
+    <div data-type="foo"></div>
+}}}
+
+You could select it with:
+
+{{{css
+    [data-type='foo'] {
+      ...
+    }
+}}}
+
+Other variants:
+
+* `[attribute='value' s]` -> is case sensitive.
+* `[attribute='value' i]` -> is case insensitive.
+* `[attribute]` -> matches all elements with a specific data-type attribute, regardless of the value.
+* `[attribute*='value']` -> matches all elements with a specific data-type attribute, that contain 'value'.
+* `[attribute^='value']` -> matches all elements with a specific data-type attribute, that start with 'value'.
+* `[attribute$='value']` -> matches all elements with a specific data-type attribute, that end with 'value'.
+
+== Pseudo-classes ==
+
+[[https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes|Pseudo-classes]] target specific states of an element.
+
+Examples of Pseudo Classes are:
+
+{{{css
+  a:hover {} /* when a link is hovered */
+  p:nth-child(even) {} /* all even paragraphs */
+}}}
+
+Some more recent Pseudo-classes:
+
+`:has`
+
+With :has one can effectively target parent elments.
+
+{{{css
+  /* This selects an h1 element that has a p as an immediate sibling and styles the h1 with a margin of 1px */
+  h1:has(+ p) {
+    margin: 1px;
+  }
+}}}
+
+Also check out: `:is`, `:where`, `:has`, `:not`
+
+== Pseudo-elements ==
+
+[[https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements|Pseudo-elements]] let you style specific elements by adding new elements through CSS.
+
+Examples of Pseudo-elements are:
+
+{{{css
+  .my-element::before { content: "..."} 
+  .my-element::after { content: "..."} 
+  .my-element::marker {} /* targets bullet points in a list */ 
+}}}
+
+== CSS combinators ==
+
+* `>` -> first child
+* ` ` -> all children
+* `+` -> next sibling
+* `~` -> all same level siblings
+
+== Compound selectors ==
+
+`a.my-class`
+
+== Resources ==
+
+* [[https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors|MDN - CSS Selectors]]
+
+:css:

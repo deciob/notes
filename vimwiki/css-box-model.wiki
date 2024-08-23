@@ -1,0 +1,62 @@
+= Box Model =
+
+Everything displayed by CSS is a box!
+
+The box can have intrinsic, the default behaviour by browsers, and extrinsic sizing.
+
+_Intrinsic sizing_ is when you fill an element with content, and the browser handles the sizing of that element to fit the content.
+_Extrinsic sizing_ is when we explicitly set the sizing of the element, regardless of the content.
+
+The *Box Model* is made up of different box areas:
+* Content box
+* Padding box
+* Border box
+* Margin box
+
+*Note*: properties such as [[https://developer.mozilla.org/en-US/docs/Web/CSS/outline|outline]] or [[https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow|box-shadow]] live within the Margin Box space, as they are drawn on top of it. This means that setting these properties will not affect the size of the Margin Box.
+
+
+== The display property ==
+
+How the Box Model behaves depends from the *display* property.
+Different HTML elements have different default [[https://developer.mozilla.org/en-US/docs/Web/CSS/display|display]] values. 
+For example, a *div*, by default is `display: block` and a *span* is `display: inline`. 
+
+{{{css
+.container {
+   display: block | inline | inline-block | none | flex | grid;
+}
+}}}
+
+
+== The box-sizing property ==
+
+The Box Model behaviour also depends from the [[https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing|box-sizing]] property.
+
+{{{css
+.container {
+   box-sizing: content-box | border-box;
+}
+}}}
+
+To explain the difference between `content-box` and `boder-box`, lets assume that we assign to a _block_ element an explicit size. 
+With _box-sizing_ set to `content-box` that size will only apply to the Content Box, so any padding and border value we add, will be added to that value. 
+With box-sizing set to `border-box` the size will also will apply to the Content, Padding and Border Boxes. This means that any value we assign to padding, margin and border will be subtracted from the size we have set. 
+
+Different HTML elements have different box-sizing defaults, however some argue that the the `border-box` approach makes things more predictable and set all elements that way:
+
+{{{css 
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+}}}
+
+*Note*: `::before` is a pseudo-elemnt, whilst `:hover` is a pseudo-class. Before CSS3, pseudo-classes and pseudo-elemnts where both identified by a single colon `:`.
+
+
+:css:
