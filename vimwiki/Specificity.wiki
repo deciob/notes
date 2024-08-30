@@ -1,0 +1,15 @@
+= Specificity =
+
+Every selector gets a score.
+For every selector that matches an HTML element, the scores add up.
+Higher score wins!
+
+* -> 0
+element, pseudo-element (::) -> 1
+class, pseudo-class (:), attribute -> 10
+id -> 100
+inline, !important -> 1000
+
+:css:
+
+

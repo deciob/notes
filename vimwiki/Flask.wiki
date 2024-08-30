@@ -1,0 +1,6 @@
+= Flask =
+
+
+When using [[https://flask-assets.readthedocs.io/en/latest/|Flask-Assets]], you can build assets with:
+
+`flask --app flaskr assets build`

@@ -2,13 +2,25 @@
 
 [[useful-nvim-commands|Useful nvim commands]]
 
+= Python =
+
+[[pip-venv|Pip & Venv]]
+
+
 = CSS =
 
-* [[css-organisation|Organising CSS]]
-* [[css-box-model|CSS Box Model]]
-* [[css-selectors|CSS Selectors]]
-* [[css-flex|CSS flex]]
-* [[css-lch|LCH color space]]
+[[css-organisation|Organising CSS]]
+[[css-box-model|CSS Box Model]]
+[[css-selectors|CSS Selectors]]
+[[css-cascade|CSS Cascade]]
+[[css-flex|CSS flex]]
+[[css-lch|LCH color space]]
+[[css-logical-properties|CSS Logical Properties]]
+
+
+= Design =
+
+[[spacing-typography|Spacing & Typography]]
 
 = Darktable =
 

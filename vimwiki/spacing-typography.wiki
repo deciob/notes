@@ -1,0 +1,14 @@
+= Spacing & Typography =
+
+== Tips ==
+
+Try using only two font sizes and then use spacing, font weight and color to create a hierarchy.
+
+Try a small negative spacing between font characters, especially with headerers.
+
+Try line height as a small multiple of the font size, 1.2-1.3, and for headerers the multiplier should be smaller.
+
+
+
+
+

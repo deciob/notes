@@ -1,0 +1,48 @@
+= The Cascade =
+
+CSS stands for Cascading Style Sheets!
+
+The cascade is the algorith for solving conflicts when more than one style applies to an HTML element.
+
+Stages:
+
+1. Position and order of appearance (with everything else equivalent, last style declared takes precedence, but inline styles win on imprted stylesheets).
+2. [[Specificity]] (some selectors are more specific than others).
+3. Origin (browser applied, your stuff, etc.)
+4. !Important
+
+== Some imprtant stuff to remember ==
+
+Specificity is cumulative, so `a.my-class` is more specific than just `.my-class`. Tip: to bee more reusable, keep your selectors as simple as possible!
+Active animation and transition rules take precedence over normal style rules, and transitions take precedence even over !important, because its role is to change visual state!
+
+
+== Inheritance ==
+
+All HTML elements have default CSS properties.
+Some elements inherit these properties by 
+[[https://web.dev/learn/css/inheritance?continue=https%3A%2F%2Fweb.dev%2Flearn%2Fcss%2F%23article-https%3A%2F%2Fweb.dev%2Flearn%2Fcss%2Finheritance#which_properties_are_inherited_by_default|default]]
+
+=== Example ===
+
+{{{css
+    strong {
+      font-weight: 900;
+    }
+    
+    .my-component {
+      font-weight: 500;
+    }
+    
+    /* to make `.my-component strong` inherit 500, in place of 900: */
+    .my-component strong {
+      font-weight: inherit;
+    }
+}}}
+
+*inherit*: inherit the parent's computed value.
+*initial*: sets the value back to its default value.
+*unset*: inherited ? inherit : initial.
+
+:css:
+

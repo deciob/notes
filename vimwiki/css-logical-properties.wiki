@@ -1,0 +1,14 @@
+= Logical Properties =
+
+
+Any property that accepts:
+* top
+* bottom
+* left
+* right
+
+Now, also can accept:
+* block-start
+* block-end
+* inline-start
+* inline-end
