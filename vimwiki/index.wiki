@@ -14,6 +14,8 @@
 [[css-selectors|CSS Selectors]]
 [[css-cascade|CSS Cascade]]
 [[css-flex|CSS flex]]
+[[css-grid|CSS grid]]
+[[css-units|CSS Units]]
 [[css-lch|LCH color space]]
 [[css-logical-properties|CSS Logical Properties]]
 

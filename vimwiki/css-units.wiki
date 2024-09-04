@@ -1,0 +1,27 @@
+= CSS Units =
+
+== Numbers ==
+
+{{{css
+  /* This number refers to a ration of the font-size. */
+  line-length: 1.5
+}}}
+
+
+== Percentages ==
+
+{{{css
+  /* This percentage refers to the parent's width. */
+  width: 50%;
+  
+  /* This percentage refers to the element's width. */
+  transform: translateX(10%);
+}}}
+
+
+= Dimensions =
+
+If you add a unit to a number, we have dimensions!
+
+We can have absolute units (cm, px, etc.) and relative units (ch, rem, em, etc.).
+

@@ -1,0 +1,46 @@
+== Flex Child Properties - Flex items ==
+
+== flex ==
+
+`flex` is a shorthand property for `flex-grow`, `flex-shrink` and `flex-basis`.
+
+The defauls are: 
+* flex-grow: 0
+* flex-shrink: 1
+* flex-basis: auto
+
+=== flex-grow ===
+
+How much can a child grow within the flex container?
+0 is no growth, so basically the child gets the size from its content.
+If all children have the same amount of flex-grow, say 1, then the available space within the container will be allocated equally.
+
+=== flex-shrink ===
+
+How much can a child shrink within a flex container?
+For example, if we set a flex-shrink of 1, we allow the browser to break a line of content across multiple lines if necessary. 
+
+=== flex-basis ===
+
+The default size before all the flex wizadry. The default `auto` value means pick the actual size of the element.
+
+
+== flex considerations ==
+
+Most of the time you are good using `flex: {value}`, ie only setting the `flex-grow` property. 
+
+Setting `flex-grow: 0`, `flex-shrink: 0` and `flex-basis: {value}` means locking the size to whatever we give to `flex-basis`. In other words we are saying: no growth, no shrinking, pick your ideal size that I am setting you on flex-basis.
+
+
+== align-self ==
+
+`align-self` allows to set a default alignment on a single flex item.
+
+== Considerations ==
+
+There is no `justify-self` in *flexbox*, but we have it in *grid*. This is because all flex items are part of a same group, we can not individually separates them along the main-axis.
+
+
+
+
+:css: :flex:

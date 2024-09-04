@@ -1,0 +1,78 @@
+= CSS Grid =
+
+== Grid container ==
+
+All starts here, with:
+
+{{{css
+    .my-container {
+      display: grid;
+    }
+}}}
+
+This creates a new grid formatting context for all direct children of `.my-container`.
+
+== Grid items ==
+
+The direct children of the grid container.
+
+{{{html
+    <div class="my-container">
+        <div>Grid item 1</div>
+        <div>Grid item 2</div>
+        <div>Grid item 3</div>
+    </div>
+}}}
+
+== Grid lines ==
+
+A grid layout is made of columns and rows and these are delimited by grid lines.
+In a 3 column layout, we will have 5 grid lines, starting on the left of the first column in a left-to-right language.
+Grid lines are numbered starting from 1.
+
+== Grid tracks ==
+
+A grid track is what lies between 2 grid lines, basically the column or row itself.
+
+== Grid cells ==
+
+Self explanatory, a grid cell exists at the intersection of two grid tracks.
+If nothing else is specified, the children of the grid container will be automatically laid out on these cells.
+
+== Grid areas ==
+
+A collection of adjoining grid cells.
+
+== Grid gaps ==
+
+For styling purposes, a gap is a space you can set between grid tracks to space grid cells out.
+
+
+== A grid example, with rows and columns defined ==
+
+{{{css 
+.container {
+    display: grid;
+    grid-template-columns: 5em 100px 30%;
+    grid-template-rows: 200px auto;
+    gap: 10px;
+}
+}}}
+
+`auto` here means: fit the content and expand the cell if space is available.
+
+=== Intrinsic sizing keywords ===
+
+`min-content`: make the cell as small as possible, without the content overflowing.
+`max-content`: make the content fit all on one line, overflow if no space.
+`fit-content()`: behave like _max-content_ until the size you pass in as an argument, after that the content starts to wrap.
+
+=== fr unit ===
+
+`fr` arranges the space flexibly after the lines have been drawn.
+If different fr units are chosen for different tracks (`1fr`, `2fr`), then these will be flexed out proportionally.
+If mixed with a fixed unit, such as `grid-template-columns: 200px 1fr`, then it will take up the remaining available space.  
+
+=== minmax() unit ===
+
+
