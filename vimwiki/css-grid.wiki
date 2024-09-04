@@ -61,11 +61,13 @@ For styling purposes, a gap is a space you can set between grid tracks to space 
 
 `auto` here means: fit the content and expand the cell if space is available.
 
+== Useful keywords ==
+
 === Intrinsic sizing keywords ===
 
 `min-content`: make the cell as small as possible, without the content overflowing.
 `max-content`: make the content fit all on one line, overflow if no space.
-`fit-content()`: behave like _max-content_ until the size you pass in as an argument, after that the content starts to wrap.
+`fit-content()`: behaves like _max-content_ until the content no longer fits the size you pass in as an argument, after that the content starts to wrap.
 
 === fr unit ===
 
@@ -74,5 +76,44 @@ If different fr units are chosen for different tracks (`1fr`, `2fr`), then these
 If mixed with a fixed unit, such as `grid-template-columns: 200px 1fr`, then it will take up the remaining available space.  
 
 === minmax() unit ===
+
+Sets a min and max value for the tracks.
+
+
+=== repeat() ===
+
+When defining my column or row tracks, I can insert a repeat function to repeat a value several times.
+
+{{{css 
+.container {
+    display: grid;
+    /* creates a 12 column track */
+    grid-template-columns: 2fr repeat(10, 1fr) 2fr;
+}
+}}}
+
+== auto-fill & auto-fit ==
+
+{{{css 
+.container {
+    display: grid;
+    /* auto-fill auto-fit examples*/
+    grid-template-columns: repeat(auto-fill, 1fr);
+    grid-template-columns: repeat(auto-fit, 1fr);
+    grid-template-columns: repeat(auto-fill, min-max(10rem, 1fr));
+    grid-template-columns: repeat(auto-fit, min-max(10rem, 1fr));
+}
+}}}
+
+*auto-fill*
+Creates as many tracks as can fit, then wraps.
+[|***||***||***||   ||   |]
+
+*auto-fit*
+Creates as many tracks as the content and expands them to use up the available space, then wraps.
+[| ***  || ***  ||  ***  |]
+
+*NOTE*: these keywords can be very helpful in creating flexible layouts without the need of break points!
+
 
 
