@@ -61,6 +61,12 @@ For styling purposes, a gap is a space you can set between grid tracks to space 
 
 `auto` here means: fit the content and expand the cell if space is available.
 
+== Implicit vs Explicity Grid ==
+
+By setting the grid-template-columns and grid-template-rows properties we are creating an explicit grid.
+But, if we have more items than explicit grid cells, then an implicit grid will be created. 
+By default, implicit grid cells will be auto sized, so based on the content, but you can also set this explicitly, as explained [[#grid-auto-rows & grid-auto-columns|here]].
+
 == Useful keywords ==
 
 === Intrinsic sizing keywords ===
@@ -71,7 +77,7 @@ For styling purposes, a gap is a space you can set between grid tracks to space 
 
 === fr unit ===
 
-`fr` arranges the space flexibly after the lines have been drawn.
+`fr` (fraction unit) arranges the space flexibly after the lines have been drawn.
 If different fr units are chosen for different tracks (`1fr`, `2fr`), then these will be flexed out proportionally.
 If mixed with a fixed unit, such as `grid-template-columns: 200px 1fr`, then it will take up the remaining available space.  
 
@@ -113,7 +119,70 @@ Creates as many tracks as can fit, then wraps.
 Creates as many tracks as the content and expands them to use up the available space, then wraps.
 [| ***  || ***  ||  ***  |]
 
-*NOTE*: these keywords can be very helpful in creating flexible layouts without the need of break points!
+*NOTE*: these keywords can be very helpful in creating flexible and responsive layouts without the need of break points!
 
 
+== auto-flow ==
 
+{{{css 
+    grid-auto-flow: column | row | dense;
+}}}
+
+It follows the `writing-mode` property.
+`column` inserts the items along columns and `row` along rows.
+`dense` tries to fill in the gaps, so it could move some grids around!
+
+== grid-column, grid-row & co ==
+
+* grid-column
+* grid-column-end
+* grid-column-start
+* grid-row-end
+* grid-row-start
+
+All numbers reference grid lines, that start from 1, so if we set `grid-column-start: 2`, we are positioning the item in the second grid track.
+
+{{{css 
+    /* span 2 lines, so takes up 2 tracks */
+    grid-column-end: span 2;
+}}}
+
+{{{css 
+    /* line grid-column-end, but you need to explicitly set the start, that in grid-column-end is auto */
+    grid-column: auto / span 2;
+}}}
+
+It follows the `writing-mode` and the `direction` of the component.
+*NOTE*: By playing around with these properties we can stack items on top of each other or make partial overlaps. The item that follows will be positioned on top of its preceding item, unless we explicitly modify the `z-index`.
+
+== grid-auto-rows & grid-auto-columns ==
+
+By default items in the implicit grid will be auto sized by default, but we can control that:
+
+{{{css 
+    /* this will create columns (outside of the explicit grid)
+    with width: 100px, 200px, 100px, 2000px, etc... */
+    grid-auto-columns: 100px 200px;
+}}}
+
+== Named grid lines ==
+
+{{{css 
+.container {
+    display: grid;
+    grid-template-columns: [main-start another-name] 5em [middle] 100px [main-end] 30%;
+    gap: 10px;
+}
+}}}
+
+Named grids are useful to arbitrarily position items on the grid.
+
+
+== Grid template areas ==
+
+[[https://codesandbox.io/p/sandbox/lh85ss|Sandbox example]]
+
+1. set a name for every item of your grid using `grid-area`.
+2. reference those names in the `grid-template-areas` property on the parent.
+
+Great to create layout designs directly in CSS!
