@@ -1,0 +1,4 @@
+= Marging auto =
+
+When using `auto` on a margin applied to a sized-constrained block level element, this will take up all the space in the direction it is assigned. 
+NOTE: used to centre an element horizontally, or to push aside a flexbox item.
