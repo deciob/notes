@@ -10,6 +10,7 @@
 = CSS =
 
 [[css-organisation|Organising CSS]]
+[[css-layouts|CSS Layouts]]
 [[css-box-model|CSS Box Model]]
 [[css-selectors|CSS Selectors]]
 [[css-cascade|CSS Cascade]]
@@ -24,5 +25,16 @@
 
 [[spacing-typography|Spacing & Typography]]
 
-= Darktable =
+= Photography =
+
+[[photography-darktable|Darktable]]
+
+
+= 2025 CS commitments =
+
+CSS
+Accessibility
+Typescript
+Astro
+Personal website
 

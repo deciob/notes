@@ -41,7 +41,7 @@ The Box Model behaviour also depends from the [[https://developer.mozilla.org/en
 
 To explain the difference between `content-box` and `boder-box`, lets assume that we assign to a _block_ element an explicit size. 
 With _box-sizing_ set to `content-box` that size will only apply to the Content Box, so any padding and border value we add, will be added to that value. 
-With box-sizing set to `border-box` the size will also will apply to the Content, Padding and Border Boxes. This means that any value we assign to padding, margin and border will be subtracted from the size we have set. 
+With box-sizing set to `border-box` the size will also apply to the Content, Padding and Border Boxes. This means that any value we assign to padding, margin and border will be subtracted from the size we have set. 
 
 Different HTML elements have different box-sizing defaults, however some argue that the the `border-box` approach makes things more predictable and set all elements that way:
 
@@ -56,7 +56,7 @@ html {
 }
 }}}
 
-*Note*: `::before` is a pseudo-elemnt, whilst `:hover` is a pseudo-class. Before CSS3, pseudo-classes and pseudo-elemnts where both identified by a single colon `:`.
+*Note*: `::before` is a pseudo-elemnt, whilst `:hover` is a pseudo-class. Before CSS3, pseudo-classes and pseudo-elemets where both identified by a single colon `:`.
 
 
 :css:

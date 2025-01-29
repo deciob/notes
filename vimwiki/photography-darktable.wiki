@@ -1,0 +1,46 @@
+= James Popsys (from the youtube video: The editing mistakes runining your photos) =
+
+== Midtones contrast ==
+
+James Popsys as a general rule suggest to reduce the contrast in the mid-tones 
+
+From Claude:
+
+In darktable, the closest equivalent to Lightroom's Clarity adjustment would be the "local contrast" module (sometimes called "local contrast enhancement" in older versions).
+This module operates similarly to Clarity by enhancing mid-tone contrast.
+However, you have a few options in darktable that can achieve similar effects:
+
+- The primary equivalent is the "local contrast" module found in the tone group
+- You can also use the "contrast equalizer" module, which gives you more fine-grained control over contrast adjustments at different detail scales
+- The "diffuse or sharpen" module (introduced in newer versions) can also be used to achieve similar effects
+
+The "local contrast" module is generally the most straightforward replacement for Lightroom's Clarity.
+Like Clarity, it enhances local contrast while avoiding the stronger haloing effects that can occur with traditional sharpening methods.
+
+
+= Highlights vs Shadows =
+
+When taking a photo, try to not blow the highlights, try keeping as much detail as possible.
+In post-processing, generally, a histogram with some shadow is good and helps to avoid the photo looking overexposed.
+
+== Luminance ==
+
+Favour luminance over than saturation and hue to bring up the color.
+
+
+= Boris H. =
+
+== Color equalizer ==
+
+- denoise
+- lens correction
+- brighten
+
+= rgb primaries =
+- before filmic rgb is used as a white balance
+- after filmic rgb is used for artistic effects
+
+- 
+= Key shortcuts =
+
+- Shift-T : toggle tooltips

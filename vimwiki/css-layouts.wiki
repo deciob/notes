@@ -1,0 +1,24 @@
+= Flow Layout =
+
+This is the original CSS layout, from the days where the Web was just a collections of text documents with links.
+The flow layout is also the default layout for all elements, bar the table. 
+
+Whitin the flow we can have Block elements and Inline elements.
+
+=== The following applies to a writing mode like English, left->right and top->down. ===
+
+== Blocks ==
+
+You can think of the Block elements as the layout elements, the building blocks of a text document.
+Blocks are also greedy, and take up all available space by default and do not tolarate other block elements next to them.
+Their direction is from top to down.
+
+By default a block element has a `width` of `auto`. 
+Auto takes up all available space, after subtracting margins etc, 100% will take up all the space ignoring margins and will overflow if necessary.
+
+== Inlines ==
+
+Inline elements on the contrary do tolarate other elements around them, flow horizontally, and do not have any say on the vertical space. `margin-block-start` and `margin-block-end` have no effect on inline elements.
+
+
+
